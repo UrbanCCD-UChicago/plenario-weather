@@ -1,10 +1,9 @@
 import urllib.request
-#import zipfile,io
 
 def download_hourly(datetime):
-	fileName = datetime.split("-")
-	fileName = "QCLCD" + fileName[0] + fileName[1] + ".zip";
-	file = urllib.request.urlopen("https://www.ncdc.noaa.gov/orders/qclcd/").read()
-	open(fileName, 'wb').write(file)
+	file_name = datetime.split("-")
+	file_name = "QCLCD" + file_name[0] + file_name[1] + ".zip";
+	read_data = urllib.request.urlopen("https://www.ncdc.noaa.gov/orders/qclcd/").read()
+	open(file_name, 'wb').write(read_data)
 
     
